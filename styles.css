@@ -1,0 +1,409 @@
+/* Aseguramos que el box-sizing esté bien configurado */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./cv/84af598e-4af0-47f5-9040-628808540647.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin-top: 140px; /* Ajuste para el header fijo */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333333af;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #f7f7f788;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.heade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajuste dinámico de columnas */
+    gap: 10px;
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+    display: none; /* Inicialmente está oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 5; /* Asegura que el fondo esté detrás de la imagen agrandada */
+}
+
+.imagen-agrandada {
+    position: fixed;
+    z-index: 10;
+    display: none; /* Inicialmente está oculta */
+    text-align: center;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que esté perfectamente centrada */
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.contenedor-imagen {
+    max-width: 100%; /* Asegura que el contenedor no sea mayor al 100% de la ventana */
+    max-height: 90vh; /* Limita la altura del contenedor a un 80% de la altura de la pantalla */
+    overflow: auto; /* Permite el desplazamiento si la imagen es más grande que el contenedor */
+}
+
+.imagen-agrandada img {
+    width: 100%;  /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo general del footer */
+footer {
+    width: 100%;
+        background-color: #333333ce;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    footer img {
+        margin-bottom: 20px;
+    }
+    
+    footer p {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    footer nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+    
+    footer nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+    
+    footer nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Estilos para el formulario de suscripción */
+    .subscription-form {
+        margin-top: 20px;
+    }
+    
+    .subscription-form input {
+        padding: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        border: none;
+        border-radius: 4px;
+        width: 250px;
+    }
+    
+    .subscription-form button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    .subscription-form button:hover {
+        background-color: #45a049;
+    }
+    
+    /* Iconos de redes sociales */
+    .social-icons {
+        margin-top: 20px;
+    }
+    
+    .social-icons a {
+        margin: 0 15px;
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+    
+    .social-icons a:hover {
+        color: #4CAF50;
+    }
+    
+    /* Estilos responsive */
+    @media (max-width: 600px) {
+        footer nav ul {
+            display: block;
+            text-align: center;
+        }
+        footer nav ul li {
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+        footer .subscription-form input {
+            width: 200px;
+        }
+    }
+    
+
+a {
+    text-decoration: none;
+    color: #040608;
+}
+
+a:hover {
+    color: #b3d41f;
+}
+
+object {
+    border: 1px solid #ddd;
+    padding: 1em;
+}
+.cv{
+    background-color: #f7f7f788;;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.cn {
+    display: grid; /* Usamos Grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Para pantallas móviles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 16px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Para tabletas */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+}
+
+/* Para pantallas más grandes (TVs o pantallas de escritorio grandes) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas grandes */
+    }
+
+    .imagen {
+        width: 90%; /* Ajuste más grande en pantallas grandes */
+    }
+}
+
+/* Elementos de formulario y contenedor */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f788;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+.comment-form {
+    margin-top: 40px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Asegurando que el formulario esté centrado */
+.form-container {
+    background-color: #f7f7f788;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;  /* Establecer un ancho máximo para el formulario */
+    margin: 0 auto;  /* Centrar horizontalmente */
+    display: flex;  /* Usamos Flexbox */
+    flex-direction: column;  /* Organiza los elementos en columna */
+    justify-content: center;  /* Centra el contenido verticalmente */
+    align-items: center;  /* Centra el contenido horizontalmente */
+}
+/* Para los elementos del formulario */
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 5px;
+    resize: none; /* Deshabilita el redimensionado */
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff83;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0057b3d7;
+}
+
+.error {
+    color: rgb(255, 0, 0);
+    font-size: 12px;
+}

@@ -1,0 +1,352 @@
+body {
+    background-image: url(./cv/84af598e-4af0-47f5-9040-628808540647.jpg);
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed;
+    margin: 0; /* Elimina márgenes predeterminados del body */
+    height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin-top: 140px;  /* Ajusta este valor al alto de tu encabezado fijo para evitar que el contenido quede cubierto */
+}
+header {
+    position: fixed;      /* Fija el encabezado en la parte superior */
+    top: 0;               /* Lo coloca en la parte superior de la página */
+    left: 0;              /* Alinea el encabezado con el borde izquierdo */
+    width: 100%;          /* Asegura que el encabezado ocupe todo el ancho */
+    background-color: #333333af;; /* Fondo semitransparente */
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    z-index: 1000;        /* Asegura que el encabezado esté encima de otros elementos */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: #f7f7f788;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+.heade{
+    display: flex; /* Utiliza Flexbox */
+            align-items: center; /* Centra verticalmente el texto */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            gap: 40px; /* Espacio entre la imagen y el texto */
+        }
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+.heade im{
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: normal; /* Peso de la fuente */
+        }
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.imagen {
+    width: 300%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.fondo-oscuro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+    display: none; /* Inicialmente está oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 5; /* Asegura que el fondo esté detrás de la imagen agrandada */
+}
+
+.imagen-agrandada {
+    position: fixed;
+    z-index: 10;
+    display: none; /* Inicialmente está oculta */
+    text-align: center;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que esté perfectamente centrada */
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.contenedor-imagen {
+    max-width: 100%; /* Asegura que el contenedor no sea mayor al 100% de la ventana */
+    max-height: 90vh; /* Limita la altura del contenedor a un 80% de la altura de la pantalla */
+    overflow: auto; /* Permite el desplazamiento si la imagen es más grande que el contenedor */
+}
+
+.imagen-agrandada img {
+    width: 100%;  /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+/* Estilo para el header (se oculta temporalmente) */
+/* Estilo para el header (se oculta temporalmente) */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333333ce;
+    color: white;
+    padding: 10px;
+    z-index: 100; /* Asegura que esté sobre el fondo y la imagen */
+}
+
+.galeria img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+figure {
+    margin: 1em;
+    width: calc(33.33% - 2em);
+}
+
+.fig {
+    margin: 10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    bottom: -0;
+    inset: -0;
+    width: 100%; 
+    background-color: #333333ce;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    color: #040608;
+}
+
+a:hover {
+    color: #b3d41f;
+}
+
+object {
+    border: 1px solid #ddd;
+    padding: 1em;
+}
+.cv{
+    background-color: #f7f7f788;;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cn {
+    display: grid; /* Usamos Grid */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.cv {
+    padding: 20px; /* Espaciado interno en las columnas */
+    border: 1px solid #ccc; /* Borde para ver mejor las columnas */
+}
+
+@media (max-width: 768px) {
+    .galeria {
+    flex-direction: column;
+    }
+    figure {
+    width: 100%;
+    margin: 1em 0;
+    }
+}
+/* Diseño para pantallas pequeñas, como teléfonos */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px; /* Reducir tamaño de fuente */
+    padding: 10px;
+    }
+
+    .container {
+      padding: 15px; /* Espaciado adecuado */
+    }
+
+    header {
+    font-size: 18px;
+    }
+
+    .galeria {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los elementos se acomoden en múltiples filas si es necesario */
+    justify-content: space-between;  
+    }
+
+    .imagen {
+      width: 100%; /* Asegura que las imágenes no excedan el ancho */
+    }
+}
+
+  /* Diseño para tabletas (pantallas medianas) */
+@media (max-width: 768px) {
+    .container {
+    padding: 20px;
+    }
+
+    .galeria {
+      grid-template-columns: repeat(2, 1fr); /* Cambiar la cantidad de columnas */
+    }
+
+    .imagen {
+      width: 100%; /* Asegura que las imágenes no excedan el ancho */
+    }
+}
+
+/*ubicacion*/
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 220px;
+    background-color: #f7f7f788;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.comment-form {
+    margin-top: 40px;
+}
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.form-container {
+    background-color: #f7f7f788;
+    padding: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff83;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0057b3d7;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}

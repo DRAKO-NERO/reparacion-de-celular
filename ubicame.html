@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ubicame</title>
+    <link rel="shortcut icon" href="iconos/foto-sin-fondo1-150x150.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul class="heade">
+                <li ><img class="logo" src="cv/logo principal.jpg"></li>
+                <li><a class="im" href="index.html">Inicio</a></li>
+                <li><a class="im" href="servicio tecnico.html">Servicios</a></li>
+                <li><a class="im" href="Experiencia Laboral.html">Experiencia Laboral</a></li>
+                <li><a class="im" href="Certificado.html">Certificados</a></li>
+                <li><a class="im" href="curriculum vitae.html">Curriculum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container">
+        <h1>Ubicame</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d321.2620476836151!2d-76.97615351741875!3d-12.143462569757016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1735331973462!5m2!1ses-419!2spe" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p>DANIEL GARCES – Mz=h1 lote=4 – PAMPLONA BAJA – SAN JUAN DE MIRAFLORES</p>
+        <section>
+            <h2>Horario de atención</h2>
+            <p>Lunes a Viernes: <strong>8:00 a.m. – 4:00 p.m.</strong></p>
+        </section>
+        <section>
+            <h2>Contacto</h2>
+            <p>Si tienes algún problema técnico o necesitas asistencia, no dudes en <strong >contactarme</strong>. ¡Estoy para ayudarte!</p>
+        </section>
+        <div class="form-container">
+            <h2>Contáctame vía WhatsApp</h2>
+            <form id="contact-form" method="POST" action="save_data.php">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="name-error"></span>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Correo Electrónico o Número de WhatsApp:</label>
+                    <input type="text" id="email" name="email" required>
+                    <span class="error" id="email-error"></span>
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+        
+                <button type="submit">Enviar a WhatsApp</button>
+            </form>
+        </div>
+        
+        </main>
+        <footer>
+            <div class="footer-content">
+                <!-- Logo (opcional) -->
+                <img src="iconos/foto-sin-fondo1-150x150.png" alt="Logo" width="100" height="100">
+        
+                <!-- Mensaje de derechos de autor -->
+                <p>&copy; 2025 OSCAR ADIEL SULLA ZAPATA. Todos los derechos reservados.</p>
+        
+                <!-- Enlaces de navegación -->
+                <nav>
+                    <ul>
+                        <li><a href="/privacy-policy">Política de privacidad</a></li>
+                        <li><a href="/terms">Términos de uso</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Iconos de redes sociales -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oscaradiel.sullazapata" target="_blank" aria-label="Facebook"><img src="iconos/fbchico.ico" alt="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://x.com/osadsuza" target="_blank" aria-label="Twitter"><img src="iconos/twitterchico.ico" alt="Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/drakonero10/" target="_blank" aria-label="Instagram"><img src="iconos/instagramchico.ico" alt="instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/oscar-adiel-sulla-zapata/" target="_blank" aria-label="Linkedin"><img src="iconos/linkedinchico.ico" alt="instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>
