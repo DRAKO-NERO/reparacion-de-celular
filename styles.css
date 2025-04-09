@@ -279,6 +279,7 @@ object {
     }
 
     header {
+        position:relative;
         font-size: 16px;
     }
 
@@ -299,6 +300,10 @@ object {
 @media (max-width: 768px) {
     .galeria {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+    header {
+        position:relative;
+        font-size: 16px;
     }
 }
 
