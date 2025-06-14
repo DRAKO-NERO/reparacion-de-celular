@@ -39,7 +39,7 @@ formIsValid = false;
 
     if (formIsValid) {
       // Crear el enlace de WhatsApp con un formato de comentario
-      const phoneNumber = '978334237'; // Reemplaza con tu número de WhatsApp
+      const phoneNumber = '51978334237'; // Reemplaza con tu número de WhatsApp
     const encodedMessage = encodeURIComponent(`Hola, mi nombre es ${name}.\nMi correo o número es ${email}.\n\nComentario:\n"${message}"`);
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
